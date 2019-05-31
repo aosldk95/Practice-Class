@@ -21,12 +21,13 @@ namespace practice1
             pig.MakeSound();
 
 
-            Animal fox = new Animal();
-            fox.name = "여우";
-            fox.sound = "woof";
-            Console.WriteLine("[F] name : {0}, sound : {1}", fox.name, fox.sound);
+            Animal fox = new Animal("여우", "How");       // Animal = Class, fox = instance, new Animal = 생성자, ("여우","How") = 파라미터
 
-            fox.MakeSound();
+            fox.MakeSound();        // function
+
+            Animal.GetNumOfAnimals();
+
+            Console.WriteLine("number : {0}", Animal.GetNumOfAnimals());
 
             Console.ReadLine();
         }

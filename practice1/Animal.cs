@@ -8,25 +8,50 @@ namespace practice1
 {
     class Animal
     {
-        public string name;
-        public string sound;
+        static int numOfAnimals = 0;
 
+        private string mName;
+        private string mSound;
+        private int mLegCount;
+
+        //첫번째 생성자
         public Animal()
         {
-            name = "No name";
-            sound = "No sound";
+            mName = "No name";
+            mSound = "No sound";
+            numOfAnimals++;
 
         }
 
-        public Animal(string n, string s)
+        //두번째 생성자
+        public Animal(string name, string sound)
         {
-            name = n;
-            sound = s;
+            mName = name;
+            mSound = sound;
+            //numOfAnimals = numOfAnimals + 1;
+            numOfAnimals++;
         }
 
+        //세번째 생성자
+        public Animal(string name, string sound, int legCount)
+        {
+            mName = name;
+            mSound = sound;
+            mLegCount = legCount;
+            numOfAnimals++;
+
+        }
+
+
+        //출력 함수
         public void MakeSound()
         {
-            Console.WriteLine("[F] name : {0}, sound : {1}", name, sound);
+            Console.WriteLine("[A] name : {0}, sound : {1}, number : {2}", mName, mSound, numOfAnimals);
+        }
+
+        public static int GetNumOfAnimals()
+        {
+            return numOfAnimals;
         }
     }
 }
