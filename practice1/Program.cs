@@ -10,13 +10,23 @@ namespace practice1
     {
         static void Main(string[] args)
         {
+            Animal cow = new Animal("소", "Mewww");
+
+            cow.MakeSound();
+
+
+            Animal pig = new Animal("돼지", "Quiq");
+            
+
+            pig.MakeSound();
+
 
             Animal fox = new Animal();
             fox.name = "여우";
             fox.sound = "woof";
             Console.WriteLine("[F] name : {0}, sound : {1}", fox.name, fox.sound);
 
-            fox.print();
+            fox.MakeSound();
 
             Console.ReadLine();
         }

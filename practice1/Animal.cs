@@ -24,7 +24,7 @@ namespace practice1
             sound = s;
         }
 
-        public void print()
+        public void MakeSound()
         {
             Console.WriteLine("[F] name : {0}, sound : {1}", name, sound);
         }
